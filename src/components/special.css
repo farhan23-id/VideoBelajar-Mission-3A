@@ -1,0 +1,257 @@
+@media screen and (width<64rem) {
+    header.navbar {
+        box-shadow: 0px 0px 1px 0px #3E434A4F;
+        box-shadow: 4px 8px 12px 0px #3E434A26;
+    }
+}
+
+.hero {
+    background-image:
+        linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+        url("../asset/hero/hero_main.jpg");
+}
+
+/* Catalog tabs */
+#catalog-tabs label {
+    cursor: pointer;
+    display: inline-flex;
+    white-space: nowrap;
+}
+
+.tab-underline {
+    width: 50%;
+    height: 0.375rem;
+    border-radius: 0.875rem;
+}
+
+/* Active state */
+#catalog-tabs input:checked~.tab-underline {
+    background: var(--tertiary);
+}
+
+#catalog-tabs input:checked+label {
+    color: var(--tertiary);
+}
+
+/* Star */
+.stars {
+    --percent: calc(var(--rating) / 5 * 100%);
+
+    font-size: 1rem;
+    line-height: 14.25px;
+    letter-spacing: 2px;
+    height: 14.25px;
+    position: relative;
+    display: inline-block;
+}
+
+.stars::before {
+    content: "★★★★★";
+    color: var(--border);
+    display: block;
+}
+
+.stars::after {
+    content: "★★★★★";
+    color: var(--color-warning-default);
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: var(--percent);
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+
+.bannerCTA {
+    background-image:
+        linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+        url("../asset/bannerCTA/BannerCTA.jpg");
+}
+
+
+
+/* Footer */
+.ftr-links li {
+    margin-bottom: 0.8125rem;
+}
+
+.ftr-links a {
+    font-family: var(--font-sans);
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 140%;
+    letter-spacing: 0.2px;
+    color: var(--color-textDark-secondary);
+    white-space: nowrap;
+
+    &:hover {
+        text-decoration: underline;
+    }
+
+    @media (width<64rem) {
+        font-size: 0.875rem;
+    }
+}
+
+.ftr-heading::after {
+    content: url("../../asset/icon/arrow.png");
+    transition: transform 0.5s ease;
+}
+
+.ftr-toggle:checked~.ftr-links {
+    display: block;
+}
+
+.ftr-toggle:checked~.ftr-heading::after {
+    transform: rotate(90deg);
+}
+
+@media (width >=64rem) {
+    .ftr-group {
+        flex: 1;
+    }
+
+    .ftr-group .ftr-links {
+        display: block !important;
+    }
+
+    .ftr-heading {
+        pointer-events: none;
+        cursor: default;
+    }
+
+    .ftr-heading::after {
+        display: none !important;
+    }
+}
+
+
+.social-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 2.1875rem;
+    height: 2.1875rem;
+    border: 1.5px solid var(--color-border-sosmed);
+    border-radius: 50%;
+
+    img {
+        object-fit: contain;
+        width: 1.25rem;
+        height: 1.25rem;
+    }
+
+    &.linkedin:hover {
+        border-color: var(--linkedin);
+        background-color: var(--linkedin);
+
+        img {
+            filter: brightness(0) invert(1);
+            /* ubah gambar jadi putih */
+        }
+    }
+
+    &.facebook:hover {
+        border-color: var(--facebook);
+        background-color: var(--facebook);
+
+        img {
+            filter: brightness(0) invert(1);
+        }
+    }
+
+    &.instagram:hover {
+        border-color: var(--instagram);
+        background-color: var(--instagram);
+
+        img {
+            filter: brightness(0) invert(1);
+        }
+    }
+
+    &.twitter:hover {
+        border-color: var(--twitter);
+        background-color: var(--twitter);
+
+        img {
+            filter: brightness(0) invert(1);
+        }
+    }
+
+    &:active {
+        transform: scale(0.92);
+    }
+
+}
+
+
+.password-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+.password-wrapper input {
+    width: 100%;
+    padding-right: 40px;
+}
+
+.btn-toggle-eye {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+.icon-eye {
+    width: 20px;
+    height: 20px;
+    color: #9ca3af;
+}
+
+.separator::before,
+.separator::after {
+    content: "";
+    flex: 1;
+    border-bottom: 1px solid var(--border);
+}
+
+select {
+    appearance: none;
+
+    background-image: url(../../asset/icon/arrow_2.png);
+    background-repeat: no-repeat;
+    background-position: right 8px center;
+}
+
+/* Register page */
+.flag-icon {
+    width: 24px;
+    height: 24px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 1;
+    border-radius: 2px;
+}
+
+/* Jika +62 dipilih */
+.country-wrapper:has(option[value="+62"]:checked) .flag-icon {
+    background-image: url('../../asset/icon/Indonesia\(ID\).png');
+}
+
+/* Jika +60 dipilih */
+.country-wrapper:has(option[value="+60"]:checked) .flag-icon {
+    background-image: url('../../asset/icon/Malaysia\(MY\).png');
+}
+
+/* Jika +65 dipilih */
+.country-wrapper:has(option[value="+61"]:checked) .flag-icon {
+    background-image: url('../../asset/icon/Japan\(JP\).png');
+}

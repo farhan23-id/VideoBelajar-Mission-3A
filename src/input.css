@@ -1,0 +1,10 @@
+@import "tailwindcss";
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&family=Lato:wght@400;700&family=Poppins:wght@400;600;700&display=swap');
+
+@import "./base/variable.css";
+@import "./base/global.css";
+
+@import "./components/button.css";
+@import "./components/special.css";
+@import "./components/navbar.css";

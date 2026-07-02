@@ -1,0 +1,784 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./src/output.css">
+
+    <title>Beranda</title>
+</head>
+
+<body class="bg-ivory w-full min-h-screen">
+    <header
+        class="navbar sticky top-0 z-50 bg-primaryBg border-y border-border lg:border-t-0 py-4 px-6 lg:px-20 flex justify-between items-center gap-9">
+
+        <div class="flex items-center lg:justify-between grow gap-6">
+            <a href="index.html" class="w-38 h-10.5 relative lg:w-59.25 lg:h-14">
+                <img src="asset/logo.png" alt="Video Belajar Logo"
+                    class="relative w-[144.77px] h-[22.56px] top-[9.75px] left-[3.25px] object-contain lg:w-48.25 lg:h-7.5 lg:top-3.25 lg:left-5.5">
+            </a>
+
+            <a href="#kategori"
+                class="hidden lg:block font-sans font-medium text-[1rem] leading-[140%] tracking-[0.2px] text-textDark-secondary hover:underline active:bg-greyscale-200">Kategori</a>
+        </div>
+
+        <input type="checkbox" id="menu-toggle" class="hidden peer" aria-controls="main-nav">
+        <label for="menu-toggle" class="block lg:hidden cursor-pointer select-none">
+            <img src="./asset/icon/burger.svg" alt="Hamburger">
+        </label>
+
+        <nav class="hidden peer-checked:flex lg:flex absolute lg:static top-full left-0 w-full lg:w-auto bg-primaryBg shadow-md lg:shadow-none border-b lg:border-none border-gray-200 p-4 lg:p-0 z-40"
+            aria-label="navbar" id="main-nav">
+
+            <ul class="flex flex-col lg:flex-row justify-start lg:justify-between items-center gap-4 w-full">
+
+                <li class="hidden lg:block">
+                    <a href="login.html" class="btn btn-primary">Login</a>
+                </li>
+                <li class="hidden lg:block">
+                    <a href="register.html" class="btn btn-primary-outlined">Register</a>
+                </li>
+                <li class="hidden">
+                    <a href="#profile" class="profile-img">
+                        <img src="asset/profile/profile_1.png" alt="Avatar" class="profile-img size-11 rounded-[10px]">
+                    </a>
+                </li>
+
+                <li class="text-center w-full">
+                    <a href="login.html"
+                        class="nav-effect lg:hidden pb-2 font-sans text-[1rem] font-medium tracking-[0.2px] text-textDark-secondary">Login</a>
+                </li>
+                <li class="text-center w-full">
+                    <a href="register.html"
+                        class="nav-effect lg:hidden pb-2 font-sans font-medium tracking-[0.2px] text-textDark-secondary">Register</a>
+                </li>
+                <li class="text-center w-full hidden">
+                    <a href="#Profile"
+                        class="nav-effect lg:hidden pb-2 font-sans font-medium tracking-[0.2px] text-textDark-secondary">Profile</a>
+                </li>
+                <li class="text-center w-full">
+                    <a href="#Category"
+                        class="nav-effect lg:hidden pb-2 font-sans font-medium tracking-[0.2px] text-textDark-secondary">Category</a>
+                </li>
+                <li class="text-center w-full">
+                    <a href="#Achievement"
+                        class="nav-effect lg:hidden pb-2font-sans font-medium tracking-[0.2px] text-textDark-secondary">Achievement</a>
+                </li>
+
+            </ul>
+        </nav>
+    </header>
+
+    <main class="max-w-360 mx-auto w-full flex flex-col gap-6 py-7 px-5 lg:gap-16 lg:py-16 lg:px-30">
+
+        <section
+            class="hero min-h-100 rounded-[10px] py-16 px-5 text-center bg-cover bg-center bg-no-repeat flex flex-col justify-center items-center gap-6 lg:pt-20.5 lg:pb-16 lg:px-35">
+
+            <div class="hero-text flex flex-col gap-3 mx-auto h-full">
+                <h1
+                    class="font-poppins text-textLight-primary font-bold text-[1.5rem] leading-[110%] tracking-normal lg:text-[3rem]">
+                    Revolusi Pembelajaran: Temukan Ilmu Baru melalui Platform Video Interaktif!
+                </h1>
+                <p
+                    class="font-sans text-textLight-primary font-medium text-[0.875rem] leading-[140%] tracking-[0.2px] lg:text-[1rem]">
+                    Temukan ilmu baru yang menarik dan mendalam melalui koleksi video pembelajaran berkualitas tinggi.
+                    Tidak hanya itu, Anda juga dapat berpartisipasi dalam latihan interaktif yang akan meningkatkan
+                    pemahaman Anda.
+                </p>
+            </div>
+
+            <a href="#" class="btn btn-primary">
+                Temukan Video Course Untuk Dipelajari!
+            </a>
+        </section>
+
+        <!-- Catalog -->
+        <section class="catalog flex flex-col gap-6 lg:gap-8">
+            <header class="flex flex-col gap-2.5">
+                <h3
+                    class="font-poppins font-semibold text-[1.5rem] leading-[110%] tracking-normal text-textDark-primary lg:text-[2rem]">
+                    Koleksi Video Pembelajaran Unggulan</h3>
+                <p
+                    class="font-sans font-medium text-[0.875rem] leading-[140%] tracking-[0.2px] text-textDark-secondary lg:text-[1rem]">
+                    Jelajahi Dunia Pengetahuan Melalui Pilihan Kami!</p>
+            </header>
+
+            <nav class="flex flex-nowrap overflow-auto scrollbar-none" id="catalog-tabs" aria-label="Item category">
+
+                <div class="relative flex flex-col items-start">
+                    <input class="hidden" type="radio" name="category" id="all" checked>
+                    <label
+                        class="font-sans font-medium text-[0.875rem] leading-[140%] tracking-[0.2px] text-textDark-secondary lg:text-[1rem] py-3 pr-9 inline-flex"
+                        for="all">Semua Kelas</label>
+                    <span class="tab-underline"></span>
+                </div>
+
+                <div class="relative flex flex-col items-start">
+                    <input class="hidden" type="radio" name="category" id="marketing">
+                    <label
+                        class="font-sans font-medium text-[0.875rem] leading-[140%] tracking-[0.2px] text-textDark-secondary lg:text-[1rem] py-3 pr-9 inline-flex"
+                        for="marketing">Pemasaran</label>
+                    <span class="tab-underline"></span>
+                </div>
+
+                <div class="relative flex flex-col items-start">
+                    <input class="hidden" type="radio" name="category" id="design">
+                    <label
+                        class="font-sans font-medium text-[0.875rem] leading-[140%] tracking-[0.2px] text-textDark-secondary lg:text-[1rem] py-3 pr-9 inline-flex"
+                        for="design">Desain</label>
+                    <span class="tab-underline"></span>
+                </div>
+
+                <div class="relative flex flex-col items-start">
+                    <input class="hidden" type="radio" name="category" id="self-dev">
+                    <label
+                        class="font-sans font-medium text-[0.875rem] leading-[140%] tracking-[0.2px] text-textDark-secondary lg:text-[1rem] py-3 pr-9 inline-flex"
+                        for="self-dev">Pengembangan Diri</label>
+                    <span class="tab-underline"></span>
+                </div>
+
+                <div class="relative flex flex-col items-start">
+                    <input class="hidden" type="radio" name="category" id="business">
+                    <label
+                        class="font-sans font-medium text-[0.875rem] leading-[140%] tracking-[0.2px] text-textDark-secondary lg:text-[1rem] py-3 pr-9 inline-flex"
+                        for="business">Bisnis</label>
+                    <span class="tab-underline"></span>
+                </div>
+
+            </nav>
+
+            <ul class="card-ctr grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5">
+                <!-- Item 1 -->
+                <li class="card-item lg:pb-3">
+                    <article
+                        class="h-full bg-primaryBg rounded-[0.625rem] p-4 border border-border flex flex-wrap items-start gap-2 lg:flex-col lg:p-5 lg:gap-4">
+
+                        <img src="asset/catalog/catalog_1.jpg" alt="course"
+                            class="w-20.5 h-20.5 rounded-[0.625rem] object-cover mr-3 lg:mr-0 lg:w-full lg:h-48.25" />
+
+                        <div class="content-wrapper flex flex-col gap-2 flex-1 min-h-20.5 justify-between lg:gap-4">
+                            <div class="card-title flex flex-col gap-2">
+                                <h3
+                                    class="font-poppins font-semibold text-[1rem] leading-[120%] tracking-normal text-textDark-primary lg:text-[1.125rem]">
+                                    Front-End Web Development</h3>
+                                <p
+                                    class="hidden lg:line-clamp-2 font-sans font-medium text-[1rem] leading-[140%] tracking-[0.2px] text-textDark-secondary  w-full">
+                                    Mulai transformasi dengan instruktur profesional, harga yang
+                                    terjangkau, dan kurikulum terbaik
+                                </p>
+                            </div>
+
+                            <div class="card-avatar flex items-center gap-2  lg:gap-2.5">
+                                <img class="tutor rounded-[0.625rem] w-9 h-9 lg:w-10 lg:h-10"
+                                    src="asset/avatar/avatar_1.png" alt="tutor avatar" />
+                                <div class="avatar-title">
+                                    <p
+                                        class="tutor-name font-sans font-medium text-[0.875rem] leading-[140%] tracking-[0.2px] text-textDark-primary lg:text-[1rem]">
+                                        Andi Pratama</p>
+                                    <p
+                                        class="tutor-company font-sans font-normal text-[0.75rem] leading-[140%] tracking-[0.2px] text-textDark-secondary lg:text-[0.875rem]">
+                                        Senior Frontend Engineer
+                                        <span class="hidden lg:inline-block">di</span>
+                                        <span class="company hidden lg:inline-block font-bold">CodeLab</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card-information flex justify-between items-center w-full mt-auto">
+                            <div class="rating flex items-center gap-2">
+                                <div class="stars" style="--rating: 4.5;"></div>
+                                <p
+                                    class="font-sans font-medium text-[0.75rem] leading-[140%] tracking-[0.2px] underline text-textDark-secondary lg:text-[0.875rem]">
+                                    4.5
+                                    (100)</p>
+                            </div>
+
+                            <div class="price">
+                                <p
+                                    class="font-poppins font-semibold text-[1.25rem] leading-[120%] tracking-normal text-primary lg:text-[1.5rem]">
+                                    Rp500k</p>
+                            </div>
+                        </div>
+                    </article>
+                </li>
+                <!-- Item 1 -->
+                <li class="card-item lg:pb-3">
+                    <article
+                        class="h-full bg-primaryBg rounded-[0.625rem] p-4 border border-border flex flex-wrap items-start gap-2 lg:flex-col lg:p-5 lg:gap-4">
+
+                        <img src="asset/catalog/catalog_2.jpg" alt="course"
+                            class="w-20.5 h-20.5 rounded-[0.625rem] object-cover mr-3 lg:mr-0 lg:w-full lg:h-48.25" />
+
+                        <div class="content-wrapper flex flex-col gap-2 flex-1 min-h-20.5 justify-between lg:gap-4">
+                            <div class="card-title flex flex-col gap-2">
+                                <h3
+                                    class="font-poppins font-semibold text-[1rem] leading-[120%] tracking-normal text-textDark-primary lg:text-[1.125rem]">
+                                    Belajar React.js untuk Pemula</h3>
+                                <p
+                                    class="hidden lg:line-clamp-2 font-sans font-medium text-[1rem] leading-[140%] tracking-[0.2px] text-textDark-secondary  w-full">
+                                    Mulai transformasi dengan instruktur profesional, harga yang
+                                    terjangkau, dan kurikulum terbaik
+                                </p>
+                            </div>
+
+                            <div class="card-avatar flex items-center gap-2  lg:gap-2.5">
+                                <img class="tutor rounded-[0.625rem] w-9 h-9 lg:w-10 lg:h-10"
+                                    src="asset/avatar/avatar_2.png" alt="tutor avatar" />
+                                <div class="avatar-title">
+                                    <p
+                                        class="tutor-name font-sans font-medium text-[0.875rem] leading-[140%] tracking-[0.2px] text-textDark-primary lg:text-[1rem]">
+                                        Nadia Aulia</p>
+                                    <p
+                                        class="tutor-company font-sans font-normal text-[0.75rem] leading-[140%] tracking-[0.2px] text-textDark-secondary lg:text-[0.875rem]">
+                                        Software Engineer
+                                        <span class="hidden lg:inline-block">di</span>
+                                        <span class="company hidden lg:inline-block font-bold">NextCode</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card-information flex justify-between items-center w-full mt-auto">
+                            <div class="rating flex items-center gap-2">
+                                <div class="stars" style="--rating: 4;"></div>
+                                <p
+                                    class="font-sans font-medium text-[0.75rem] leading-[140%] tracking-[0.2px] underline text-textDark-secondary lg:text-[0.875rem]">
+                                    4
+                                    (100)</p>
+                            </div>
+
+                            <div class="price">
+                                <p
+                                    class="font-poppins font-semibold text-[1.25rem] leading-[120%] tracking-normal text-primary lg:text-[1.5rem]">
+                                    Rp450k</p>
+                            </div>
+                        </div>
+                    </article>
+                </li>
+                <!-- Item 1 -->
+                <li class="card-item lg:pb-3">
+                    <article
+                        class="h-full bg-primaryBg rounded-[0.625rem] p-4 border border-border flex flex-wrap items-start gap-2 lg:flex-col lg:p-5 lg:gap-4">
+
+                        <img src="asset/catalog/catalog_3.jpg" alt="course"
+                            class="w-20.5 h-20.5 rounded-[0.625rem] object-cover mr-3 lg:mr-0 lg:w-full lg:h-48.25" />
+
+                        <div class="content-wrapper flex flex-col gap-2 flex-1 min-h-20.5 justify-between lg:gap-4">
+                            <div class="card-title flex flex-col gap-2">
+                                <h3
+                                    class="font-poppins font-semibold text-[1rem] leading-[120%] tracking-normal text-textDark-primary lg:text-[1.125rem]">
+                                    Digital Marketing dari Nol</h3>
+                                <p
+                                    class="hidden lg:line-clamp-2 font-sans font-medium text-[1rem] leading-[140%] tracking-[0.2px] text-textDark-secondary  w-full">
+                                    Mulai transformasi dengan instruktur profesional, harga yang
+                                    terjangkau, dan kurikulum terbaik
+                                </p>
+                            </div>
+
+                            <div class="card-avatar flex items-center gap-2  lg:gap-2.5">
+                                <img class="tutor rounded-[0.625rem] w-9 h-9 lg:w-10 lg:h-10"
+                                    src="asset/avatar/avatar_3.png" alt="tutor avatar" />
+                                <div class="avatar-title">
+                                    <p
+                                        class="tutor-name font-sans font-medium text-[0.875rem] leading-[140%] tracking-[0.2px] text-textDark-primary lg:text-[1rem]">
+                                        Rina Putri</p>
+                                    <p
+                                        class="tutor-company font-sans font-normal text-[0.75rem] leading-[140%] tracking-[0.2px] text-textDark-secondary lg:text-[0.875rem]">
+                                        Digital Marketing Specialist
+                                        <span class="hidden lg:inline-block">di</span>
+                                        <span class="company hidden lg:inline-block font-bold">GrowthLab</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card-information flex justify-between items-center w-full mt-auto">
+                            <div class="rating flex items-center gap-2">
+                                <div class="stars" style="--rating: 5;"></div>
+                                <p
+                                    class="font-sans font-medium text-[0.75rem] leading-[140%] tracking-[0.2px] underline text-textDark-secondary lg:text-[0.875rem]">
+                                    5
+                                    (100)</p>
+                            </div>
+
+                            <div class="price">
+                                <p
+                                    class="font-poppins font-semibold text-[1.25rem] leading-[120%] tracking-normal text-primary lg:text-[1.5rem]">
+                                    Rp700k</p>
+                            </div>
+                        </div>
+                    </article>
+                </li>
+                <!-- Item 1 -->
+                <li class="card-item lg:pb-3">
+                    <article
+                        class="h-full bg-primaryBg rounded-[0.625rem] p-4 border border-border flex flex-wrap items-start gap-2 lg:flex-col lg:p-5 lg:gap-4">
+
+                        <img src="asset/catalog/catalog_4.jpg" alt="course"
+                            class="w-20.5 h-20.5 rounded-[0.625rem] object-cover mr-3 lg:mr-0 lg:w-full lg:h-48.25" />
+
+                        <div class="content-wrapper flex flex-col gap-2 flex-1 min-h-20.5 justify-between lg:gap-4">
+                            <div class="card-title flex flex-col gap-2">
+                                <h3
+                                    class="font-poppins font-semibold text-[1rem] leading-[120%] tracking-normal text-textDark-primary lg:text-[1.125rem]">
+                                    Strategi Social Media & Ads</h3>
+                                <p
+                                    class="hidden lg:line-clamp-2 font-sans font-medium text-[1rem] leading-[140%] tracking-[0.2px] text-textDark-secondary  w-full">
+                                    Mulai transformasi dengan instruktur profesional, harga yang
+                                    terjangkau, dan kurikulum terbaik
+                                </p>
+                            </div>
+
+                            <div class="card-avatar flex items-center gap-2  lg:gap-2.5">
+                                <img class="tutor rounded-[0.625rem] w-9 h-9 lg:w-10 lg:h-10"
+                                    src="asset/avatar/avatar_4.png" alt="tutor avatar" />
+                                <div class="avatar-title">
+                                    <p
+                                        class="tutor-name font-sans font-medium text-[0.875rem] leading-[140%] tracking-[0.2px] text-textDark-primary lg:text-[1rem]">
+                                        Kevin Wijaya</p>
+                                    <p
+                                        class="tutor-company font-sans font-normal text-[0.75rem] leading-[140%] tracking-[0.2px] text-textDark-secondary lg:text-[0.875rem]">
+                                        Performance Marketing Lead
+                                        <span class="hidden lg:inline-block">di</span>
+                                        <span class="company hidden lg:inline-block font-bold">AdSpark</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card-information flex justify-between items-center w-full mt-auto">
+                            <div class="rating flex items-center gap-2">
+                                <div class="stars" style="--rating: 3.5;"></div>
+                                <p
+                                    class="font-sans font-medium text-[0.75rem] leading-[140%] tracking-[0.2px] underline text-textDark-secondary lg:text-[0.875rem]">
+                                    3.5
+                                    (100)</p>
+                            </div>
+
+                            <div class="price">
+                                <p
+                                    class="font-poppins font-semibold text-[1.25rem] leading-[120%] tracking-normal text-primary lg:text-[1.5rem]">
+                                    Rp300k</p>
+                            </div>
+                        </div>
+                    </article>
+                </li>
+                <!-- Item 1 -->
+                <li class="card-item lg:pb-3">
+                    <article
+                        class="h-full bg-primaryBg rounded-[0.625rem] p-4 border border-border flex flex-wrap items-start gap-2 lg:flex-col lg:p-5 lg:gap-4">
+
+                        <img src="asset/catalog/catalog_5.jpg" alt="course"
+                            class="w-20.5 h-20.5 rounded-[0.625rem] object-cover mr-3 lg:mr-0 lg:w-full lg:h-48.25" />
+
+                        <div class="content-wrapper flex flex-col gap-2 flex-1 min-h-20.5 justify-between lg:gap-4">
+                            <div class="card-title flex flex-col gap-2">
+                                <h3
+                                    class="font-poppins font-semibold text-[1rem] leading-[120%] tracking-normal text-textDark-primary lg:text-[1.125rem]">
+                                    UI/UX Design dengan Figma</h3>
+                                <p
+                                    class="hidden lg:line-clamp-2 font-sans font-medium text-[1rem] leading-[140%] tracking-[0.2px] text-textDark-secondary  w-full">
+                                    Mulai transformasi dengan instruktur profesional, harga yang
+                                    terjangkau, dan kurikulum terbaik
+                                </p>
+                            </div>
+
+                            <div class="card-avatar flex items-center gap-2  lg:gap-2.5">
+                                <img class="tutor rounded-[0.625rem] w-9 h-9 lg:w-10 lg:h-10"
+                                    src="asset/avatar/avatar_5.png" alt="tutor avatar" />
+                                <div class="avatar-title">
+                                    <p
+                                        class="tutor-name font-sans font-medium text-[0.875rem] leading-[140%] tracking-[0.2px] text-textDark-primary lg:text-[1rem]">
+                                        Clara Wijaya</p>
+                                    <p
+                                        class="tutor-company font-sans font-normal text-[0.75rem] leading-[140%] tracking-[0.2px] text-textDark-secondary lg:text-[0.875rem]">
+                                        Lead Product Designer
+                                        <span class="hidden lg:inline-block">di</span>
+                                        <span class="company hidden lg:inline-block font-bold">Pixel Studio</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card-information flex justify-between items-center w-full mt-auto">
+                            <div class="rating flex items-center gap-2">
+                                <div class="stars" style="--rating: 5;"></div>
+                                <p
+                                    class="font-sans font-medium text-[0.75rem] leading-[140%] tracking-[0.2px] underline text-textDark-secondary lg:text-[0.875rem]">
+                                    5
+                                    (100)</p>
+                            </div>
+
+                            <div class="price">
+                                <p
+                                    class="font-poppins font-semibold text-[1.25rem] leading-[120%] tracking-normal text-primary lg:text-[1.5rem]">
+                                    Rp650k</p>
+                            </div>
+                        </div>
+                    </article>
+                </li>
+                <!-- Item 1 -->
+                <li class="card-item lg:pb-3">
+                    <article
+                        class="h-full bg-primaryBg rounded-[0.625rem] p-4 border border-border flex flex-wrap items-start gap-2 lg:flex-col lg:p-5 lg:gap-4">
+
+                        <img src="asset/catalog/catalog_6.jpg" alt="course"
+                            class="w-20.5 h-20.5 rounded-[0.625rem] object-cover mr-3 lg:mr-0 lg:w-full lg:h-48.25" />
+
+                        <div class="content-wrapper flex flex-col gap-2 flex-1 min-h-20.5 justify-between lg:gap-4">
+                            <div class="card-title flex flex-col gap-2">
+                                <h3
+                                    class="font-poppins font-semibold text-[1rem] leading-[120%] tracking-normal text-textDark-primary lg:text-[1.125rem]">
+                                    Desain Konten untuk Media Sosial</h3>
+                                <p
+                                    class="hidden lg:line-clamp-2 font-sans font-medium text-[1rem] leading-[140%] tracking-[0.2px] text-textDark-secondary  w-full">
+                                    Mulai transformasi dengan instruktur profesional, harga yang
+                                    terjangkau, dan kurikulum terbaik
+                                </p>
+                            </div>
+
+                            <div class="card-avatar flex items-center gap-2  lg:gap-2.5">
+                                <img class="tutor rounded-[0.625rem] w-9 h-9 lg:w-10 lg:h-10"
+                                    src="asset/avatar/avatar_6.png" alt="tutor avatar" />
+                                <div class="avatar-title">
+                                    <p
+                                        class="tutor-name font-sans font-medium text-[0.875rem] leading-[140%] tracking-[0.2px] text-textDark-primary lg:text-[1rem]">
+                                        Dimas Saputra</p>
+                                    <p
+                                        class="tutor-company font-sans font-normal text-[0.75rem] leading-[140%] tracking-[0.2px] text-textDark-secondary lg:text-[0.875rem]">
+                                        Graphic Designer
+                                        <span class="hidden lg:inline-block">di</span>
+                                        <span class="company hidden lg:inline-block font-bold">CreativeHub</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card-information flex justify-between items-center w-full mt-auto">
+                            <div class="rating flex items-center gap-2">
+                                <div class="stars" style="--rating: 2;"></div>
+                                <p
+                                    class="font-sans font-medium text-[0.75rem] leading-[140%] tracking-[0.2px] underline text-textDark-secondary lg:text-[0.875rem]">
+                                    2
+                                    (100)</p>
+                            </div>
+
+                            <div class="price">
+                                <p
+                                    class="font-poppins font-semibold text-[1.25rem] leading-[120%] tracking-normal text-primary lg:text-[1.5rem]">
+                                    Rp100k</p>
+                            </div>
+                        </div>
+                    </article>
+                </li>
+                <!-- Item 1 -->
+                <li class="card-item lg:pb-3">
+                    <article
+                        class="h-full bg-primaryBg rounded-[0.625rem] p-4 border border-border flex flex-wrap items-start gap-2 lg:flex-col lg:p-5 lg:gap-4">
+
+                        <img src="asset/catalog/catalog_7.jpg" alt="course"
+                            class="w-20.5 h-20.5 rounded-[0.625rem] object-cover mr-3 lg:mr-0 lg:w-full lg:h-48.25" />
+
+                        <div class="content-wrapper flex flex-col gap-2 flex-1 min-h-20.5 justify-between lg:gap-4">
+                            <div class="card-title flex flex-col gap-2">
+                                <h3
+                                    class="font-poppins font-semibold text-[1rem] leading-[120%] tracking-normal text-textDark-primary lg:text-[1.125rem]">
+                                    Public Speaking untuk Pemula</h3>
+                                <p
+                                    class="hidden lg:line-clamp-2 font-sans font-medium text-[1rem] leading-[140%] tracking-[0.2px] text-textDark-secondary  w-full">
+                                    Mulai transformasi dengan instruktur profesional, harga yang
+                                    terjangkau, dan kurikulum terbaik
+                                </p>
+                            </div>
+
+                            <div class="card-avatar flex items-center gap-2  lg:gap-2.5">
+                                <img class="tutor rounded-[0.625rem] w-9 h-9 lg:w-10 lg:h-10"
+                                    src="asset/avatar/avatar_7.png" alt="tutor avatar" />
+                                <div class="avatar-title">
+                                    <p
+                                        class="tutor-name font-sans font-medium text-[0.875rem] leading-[140%] tracking-[0.2px] text-textDark-primary lg:text-[1rem]">
+                                        Maya Lestari</p>
+                                    <p
+                                        class="tutor-company font-sans font-normal text-[0.75rem] leading-[140%] tracking-[0.2px] text-textDark-secondary lg:text-[0.875rem]">
+                                        Communication Coach
+                                        <span class="hidden lg:inline-block">di</span>
+                                        <span class="company hidden lg:inline-block font-bold">SpeakUp</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card-information flex justify-between items-center w-full mt-auto">
+                            <div class="rating flex items-center gap-2">
+                                <div class="stars" style="--rating: 4;"></div>
+                                <p
+                                    class="font-sans font-medium text-[0.75rem] leading-[140%] tracking-[0.2px] underline text-textDark-secondary lg:text-[0.875rem]">
+                                    4
+                                    (100)</p>
+                            </div>
+
+                            <div class="price">
+                                <p
+                                    class="font-poppins font-semibold text-[1.25rem] leading-[120%] tracking-normal text-primary lg:text-[1.5rem]">
+                                    Rp250k</p>
+                            </div>
+                        </div>
+                    </article>
+                </li>
+                <!-- Item 1 -->
+                <li class="card-item lg:pb-3">
+                    <article
+                        class="h-full bg-primaryBg rounded-[0.625rem] p-4 border border-border flex flex-wrap items-start gap-2 lg:flex-col lg:p-5 lg:gap-4">
+
+                        <img src="asset/catalog/catalog_8.jpg" alt="course"
+                            class="w-20.5 h-20.5 rounded-[0.625rem] object-cover mr-3 lg:mr-0 lg:w-full lg:h-48.25" />
+
+                        <div class="content-wrapper flex flex-col gap-2 flex-1 min-h-20.5 justify-between lg:gap-4">
+                            <div class="card-title flex flex-col gap-2">
+                                <h3
+                                    class="font-poppins font-semibold text-[1rem] leading-[120%] tracking-normal text-textDark-primary lg:text-[1.125rem]">
+                                    Manajemen Waktu & Produktivitas</h3>
+                                <p
+                                    class="hidden lg:line-clamp-2 font-sans font-medium text-[1rem] leading-[140%] tracking-[0.2px] text-textDark-secondary  w-full">
+                                    Mulai transformasi dengan instruktur profesional, harga yang
+                                    terjangkau, dan kurikulum terbaik
+                                </p>
+                            </div>
+
+                            <div class="card-avatar flex items-center gap-2  lg:gap-2.5">
+                                <img class="tutor rounded-[0.625rem] w-9 h-9 lg:w-10 lg:h-10"
+                                    src="asset/avatar/avatar_8.png" alt="tutor avatar" />
+                                <div class="avatar-title">
+                                    <p
+                                        class="tutor-name font-sans font-medium text-[0.875rem] leading-[140%] tracking-[0.2px] text-textDark-primary lg:text-[1rem]">
+                                        Yoga Prasetyo</p>
+                                    <p
+                                        class="tutor-company font-sans font-normal text-[0.75rem] leading-[140%] tracking-[0.2px] text-textDark-secondary lg:text-[0.875rem]">
+                                        FutureSkills
+                                        <span class="hidden lg:inline-block">di</span>
+                                        <span class="company hidden lg:inline-block font-bold">Gojek</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card-information flex justify-between items-center w-full mt-auto">
+                            <div class="rating flex items-center gap-2">
+                                <div class="stars" style="--rating: 5;"></div>
+                                <p
+                                    class="font-sans font-medium text-[0.75rem] leading-[140%] tracking-[0.2px] underline text-textDark-secondary lg:text-[0.875rem]">
+                                    5
+                                    (100)</p>
+                            </div>
+
+                            <div class="price">
+                                <p
+                                    class="font-poppins font-semibold text-[1.25rem] leading-[120%] tracking-normal text-primary lg:text-[1.5rem]">
+                                    Rp400k</p>
+                            </div>
+                        </div>
+                    </article>
+                </li>
+                <!-- Item 1 -->
+                <li class="card-item lg:pb-3">
+                    <article
+                        class="h-full bg-primaryBg rounded-[0.625rem] p-4 border border-border flex flex-wrap items-start gap-2 lg:flex-col lg:p-5 lg:gap-4">
+
+                        <img src="asset/catalog/catalog_9.jpg" alt="course"
+                            class="w-20.5 h-20.5 rounded-[0.625rem] object-cover mr-3 lg:mr-0 lg:w-full lg:h-48.25" />
+
+                        <div class="content-wrapper flex flex-col gap-2 flex-1 min-h-20.5 justify-between lg:gap-4">
+                            <div class="card-title flex flex-col gap-2">
+                                <h3
+                                    class="font-poppins font-semibold text-[1rem] leading-[120%] tracking-normal text-textDark-primary lg:text-[1.125rem]">
+                                    Membangun Bisnis Online dari Rumah</h3>
+                                <p
+                                    class="hidden lg:line-clamp-2 font-sans font-medium text-[1rem] leading-[140%] tracking-[0.2px] text-textDark-secondary  w-full">
+                                    Mulai transformasi dengan instruktur profesional, harga yang
+                                    terjangkau, dan kurikulum terbaik
+                                </p>
+                            </div>
+
+                            <div class="card-avatar flex items-center gap-2  lg:gap-2.5">
+                                <img class="tutor rounded-[0.625rem] w-9 h-9 lg:w-10 lg:h-10"
+                                    src="asset/avatar/avatar_1.png" alt="tutor avatar" />
+                                <div class="avatar-title">
+                                    <p
+                                        class="tutor-name font-sans font-medium text-[0.875rem] leading-[140%] tracking-[0.2px] text-textDark-primary lg:text-[1rem]">
+                                        Hafiz Ramadhan</p>
+                                    <p
+                                        class="tutor-company font-sans font-normal text-[0.75rem] leading-[140%] tracking-[0.2px] text-textDark-secondary lg:text-[0.875rem]">
+                                        Business Consultant
+                                        <span class="hidden lg:inline-block">di</span>
+                                        <span class="company hidden lg:inline-block font-bold">BizGrow</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card-information flex justify-between items-center w-full mt-auto">
+                            <div class="rating flex items-center gap-2">
+                                <div class="stars" style="--rating: 4.8;"></div>
+                                <p
+                                    class="font-sans font-medium text-[0.75rem] leading-[140%] tracking-[0.2px] underline text-textDark-secondary lg:text-[0.875rem]">
+                                    4.8
+                                    (100)</p>
+                            </div>
+
+                            <div class="price">
+                                <p
+                                    class="font-poppins font-semibold text-[1.25rem] leading-[120%] tracking-normal text-primary lg:text-[1.5rem]">
+                                    Rp500k</p>
+                            </div>
+                        </div>
+                    </article>
+                </li>
+
+            </ul>
+        </section>
+
+        <section class="bannerCTA rounded-sm shadow-[0_0.75rem_2.8125rem_-0.625rem_rgba(0,59,222,0.2)]">
+
+            <form action=""
+                class="subscribe flex flex-col justify-center items-center gap-10 min-h-100 py-17 px-5 lg:py-23 lg:px-[337.5px]">
+
+                <div class="banner-text flex flex-col justify-center items-center gap-1">
+                    <h2
+                        class="font-sans font-medium text-[1rem] leading-[140%] tracking-[0.2px] text-textLight-secondary lg:text-[1.125rem] ">
+                        NEWSLETTER</h2>
+
+                    <div class="banner-description flex flex-col gap-2.5 items-center justify-center">
+                        <h3
+                            class="font-poppins font-semibold text-[1.5rem] leading-[110%] tracking-normal text-textLight-primary text-center lg:text-[2rem]">
+                            Mau Belajar Lebih Banyak?</h3>
+
+                        <p
+                            class="font-sans font-normal text-[0.875rem] leading-[140%] tracking-[0.2px] text-center text-baseBg lg:text-[1rem]">
+                            Daftarkan dirimu untuk mendapatkan informasi terbaru dan penawaran spesial dari
+                            program-program terbaik hariesok.id</p>
+                    </div>
+
+                </div>
+
+                <div
+                    class="subscribe-btn rounded-[0.625rem] flex w-full flex-col gap-4 items-center lg:flex-row lg:bg-primaryBg lg:gap-5 lg:py-2 lg:pr-2 lg:pl-8">
+
+                    <label for="email" class="hidden">Masukkan Emailmu</label>
+                    <input
+                        class="w-full bg-primaryBg rounded-[0.625rem] py-2.5 px-2 font-sans font-normal text-[0.875rem] leading-[140%] tracking-[0.2px] text-center text-textDark-primary focus:outline-none lg:text-[1rem] flex-1 lg:bg-transparent lg:border-none lg:p-2 lg:placeholder:text-left"
+                        type="email" name="email" id="email" placeholder="Masukkan Emailmu" required>
+
+                    <button class="btn btn-secondary w-full whitespace-nowrap lg:w-auto"
+                        type="submit">Subscribe</button>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <footer class="bg-primaryBg border-t border-border flex flex-col gap-4 p-5 lg:py-15 lg:px-30 lg:gap-5">
+        <section class="flex flex-col gap-4 lg:flex-row lg:justify-between">
+
+            <div class="ftr-left flex flex-col gap-4 lg:max-w-88">
+                <a href="index.html" class="w-42.5 h-9 relative lg:w-51 lg:h-14">
+                    <img src="asset/logo.png" alt="Video Belajar Logo"
+                        class="w-[161.61px] h-[25.18px] lg:w-[193.03px] lg:h-[30.08px] relative top-[5.44px] left-[3.79px] block lg:top-3.25 lg:left-1.25">
+                </a>
+
+
+                <div class="personal-information flex flex-col gap-2 lg:gap-3">
+                    <h3
+                        class="font-sans font-bold text-[0.875rem] leading-[140%] tracking-[0.2px] text-textDark-primary lg:text-[1.125rem]">
+                        Gali Potensi Anda Melalui Pembelajaran Video di videobelajar.id!</h3>
+                    <p
+                        class="font-sans font-normal text-[0.875rem] leading-[140%] tracking-[0.2px] text-textDark-primary lg:text-[1rem]">
+                        Jalan Kutai Utara Nomor 1, Kelurahan Sumber, Kecamatan Banjarsari, Kota Surakarta (Solo)</p>
+                    <p
+                        class="font-sans font-normal text-[0.875rem] leading-[140%] tracking-[0.2px] text-textDark-primary lg:text-[1rem]">
+                        +62-819-0300-4666 (Fufufafa)</p>
+                </div>
+            </div>
+
+            <div class="ftr-right flex flex-col gap-3 lg:flex-row lg:items-start lg:gap-12"">
+
+                <div class=" ftr-group block lg:flex lg:flex-col lg:gap-3.75">
+                <input type="checkbox" id="ftr-toggle-kategori" class="ftr-toggle hidden" />
+
+                <label for="ftr-toggle-kategori" class="ftr-heading flex justify-between items-center cursor-pointer">
+                    <h3 class="font-sans font-bold text-[1rem] leading-[140%] tracking-[0.2px] text-textDark-primary">
+                        Kategori</h3>
+                </label>
+
+                <ul class="ftr-links hidden pb-3.25 lg:pb-0 lg:h-full">
+                    <li><a href="#">Digital & Teknologi</a></li>
+                    <li><a href="#">Pemasaran</a></li>
+                    <li><a href="#">Manajemen Bisnis</a></li>
+                    <li><a href="#">Pengembangan Diri</a></li>
+                    <li><a href="#">Desain</a></li>
+                </ul>
+            </div>
+
+            <div class="ftr-group block lg:flex lg:flex-col lg:gap-3.75">
+                <input type="checkbox" id="ftr-toggle-perusahaan" class="ftr-toggle hidden" />
+
+                <label for="ftr-toggle-perusahaan" class="ftr-heading flex justify-between items-center cursor-pointer">
+                    <h3 class="font-sans font-bold text-[1rem] leading-[140%] tracking-[0.2px] text-textDark-primary">
+                        Perusahaan</h3>
+                </label>
+
+                <ul class="ftr-links hidden h-full">
+                    <li><a href="#">Tentang Kami</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Kebijakan Privasi</a></li>
+                    <li><a href="#">Ketentuan Layanan</a></li>
+                    <li><a href="#">Bantuan</a></li>
+                </ul>
+            </div>
+
+            <div class="ftr-group block lg:flex lg:flex-col lg:gap-3.75">
+                <input type="checkbox" id="ftr-toggle-komunitas" class="ftr-toggle hidden" />
+
+                <label for="ftr-toggle-komunitas" class="ftr-heading flex justify-between items-center cursor-pointer">
+                    <h3 class="font-sans font-bold text-[1rem] leading-[140%] tracking-[0.2px] text-textDark-primary">
+                        Komunitas</h3>
+                </label>
+
+                <ul class="ftr-links hidden pb-3.25 lg:pb-0 lg:flex lg:flex-col lg:justify-items-start lg:gap-3.25">
+                    <li><a href="#">Tips Sukses</a></li>
+                    <li><a href="#">Blog</a></li>
+                </ul>
+            </div>
+
+            </div>
+
+        </section>
+
+        <hr class="border-border lg:mt-8">
+
+        <section class="ftr-author flex flex-col-reverse gap-3 lg:flex-row lg:justify-between">
+
+            <p
+                class="ftr-copyright font-sans font-medium text-[1rem] leading-[140%] tracking-[0.2px] text-textDark-secondary">
+                &copy;2026 Farhan Risdianto All rights reserved.</p>
+
+            <div class="ftr-socials flex gap-3.75">
+                <a href="#" class="social-icon linkedin">
+                    <img src="asset/icon/linkedin.png" alt="Linkedin">
+                </a>
+                <a href="#" class="social-icon facebook">
+                    <img src="asset/icon/facebook.png" alt="Facebook">
+                </a>
+                <a href="#" class="social-icon instagram">
+                    <img src="asset/icon/instagram.png" alt="Instagram">
+                </a>
+                <a href="#" class="social-icon twitter">
+                    <img src="asset/icon/twitter.png" alt="Twitter">
+                </a>
+            </div>
+
+        </section>
+    </footer>
+</body>
+
+</html>

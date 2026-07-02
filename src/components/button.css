@@ -1,0 +1,103 @@
+/* ─── Button Component Classes ─── */
+
+@utility btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+
+    padding: 0.625rem 1.625rem;
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 140%;
+    letter-spacing: 0.2px;
+
+    border-radius: 0.625rem;
+    border: 1px solid;
+    box-sizing: border-box;
+
+    cursor: pointer;
+
+    @media screen and (max-width:1023px) {
+        font-size: 0.875rem;
+    }
+}
+
+@utility btn-primary {
+    background-color: var(--color-primary);
+    color: var(--color-textLight-primary);
+    border-color: var(--color-primary);
+
+    &:hover {
+        border-color: var(--color-primary-400);
+        background-color: color-mix(in srgb, var(--color-primary-400) 95%, transparent);
+    }
+
+    &:active {
+        transform: scale(0.98);
+        background-color: color-mix(in srgb, var(--color-primary-400) 85%, transparent);
+    }
+}
+
+@utility btn-primary-outlined {
+    background-color: var(--color-primaryBg);
+    border-color: var(--color-primary);
+    color: var(--color-primary);
+
+    &:hover {
+        border-color: var(--color-primary-300);
+        background-color: color-mix(in srgb, var(--color-secondaryBg) 95%, transparent);
+    }
+
+    &:active {
+        transform: scale(0.98);
+        background-color: color-mix(in srgb, var(--color-secondaryBg) 85%, transparent);
+    }
+}
+
+@utility btn-primary-shadow {
+    background-color: var(--color-primary-100);
+    color: var(--color-primary);
+    border-color: var(--color-primary-100);
+
+    &:hover {
+        border-color: var(--color-primary);
+        background-color: color-mix(in srgb, var(--color-primary-100) 95%, transparent);
+    }
+
+    &:active {
+        transform: scale(0.98);
+        background-color: color-mix(in srgb, var(--color-primary-100) 85%, transparent);
+    }
+}
+
+@utility btn-secondary {
+    background-color: var(--color-secondary);
+    color: var(--color-textLight-primary);
+    border-color: var(--color-secondary);
+
+    &:hover {
+        background-color: color-mix(in srgb, var(--color-secondary) 90%, transparent);
+    }
+
+    &:active {
+        transform: scale(0.98);
+        background-color: color-mix(in srgb, var(--color-secondary) 80%, transparent);
+    }
+}
+
+
+@utility btn-google {
+    background-color: var(--color-primaryBg);
+    color: var(--color-textDark-secondary);
+    border-color: var(--color-border);
+
+    &:hover {
+        background-color: var(--color-greyscale-200);
+    }
+
+    &:active {
+        transform: scale(0.98);
+        background-color: var(--color-greyscale-300);
+    }
+}

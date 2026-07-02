@@ -1,0 +1,154 @@
+@custom-variant dark (&:is(.dark *));
+
+@theme {
+    --color-ivory: var(--ivory);
+
+    --color-primary-100: var(--primary-100);
+    --color-primary-200: var(--primary-200);
+    --color-primary-300: var(--primary-300);
+    --color-primary-400: var(--primary-400);
+    --color-primary: var(--primary);
+
+    --color-secondary-100: var(--secondary-100);
+    --color-secondary-200: var(--secondary-200);
+    --color-secondary-300: var(--secondary-300);
+    --color-secondary-400: var(--secondary-400);
+    --color-secondary: var(--secondary);
+
+    --color-tertiary-100: var(--tertiary-100);
+    --color-tertiary-200: var(--tertiary-200);
+    --color-tertiary-300: var(--tertiary-300);
+    --color-tertiary-400: var(--tertiary-400);
+    --color-tertiary: var(--tertiary);
+
+    --color-textDark-primary: var(--textDark-primary);
+    --color-textDark-secondary: var(--textDark-secondary);
+    --color-textDark-disabled: var(--textDark-disabled);
+
+    --color-textLight-primary: var(--textLight-primary);
+    --color-textLight-secondary: var(--textLight-secondary);
+    --color-textLight-disabled: var(--textLight-disabled);
+
+    --color-primaryBg: var(--primaryBg);
+    --color-baseBg: var(--baseBg);
+    --color-secondaryBg: var(--secondaryBg);
+    --color-border: var(--border);
+
+    --color-info-pressed: var(--info-pressed);
+    --color-info-hover: var(--info-hover);
+    --color-info-default: var(--info-default);
+    --color-info-bg: var(--info-bg);
+
+    --color-success-pressed: var(--success-pressed);
+    --color-success-hover: var(--success-hover);
+    --color-success-default: var(--success-default);
+    --color-success-bg: var(--success-bg);
+
+    --color-warning-pressed: var(--warning-pressed);
+    --color-warning-hover: var(--warning-hover);
+    --color-warning-default: var(--warning-default);
+    --color-warning-bg: var(--warning-bg);
+
+    --color-error-pressed: var(--error-pressed);
+    --color-error-hover: var(--error-hover);
+    --color-error-default: var(--error-default);
+    --color-error-bg: var(--error-bg);
+
+    --color-greyscale-50: var(--greyscale-50);
+    --color-greyscale-100: var(--greyscale-100);
+    --color-greyscale-200: var(--greyscale-200);
+    --color-greyscale-300: var(--greyscale-300);
+    --color-greyscale-400: var(--greyscale-400);
+    --color-greyscale-500: var(--greyscale-500);
+    --color-greyscale-600: var(--greyscale-600);
+    --color-greyscale-700: var(--greyscale-700);
+    --color-greyscale-800: var(--greyscale-800);
+    --color-greyscale-900: var(--greyscale-900);
+
+    --color-linkedin: var(--linkedin);
+    --color-facebook: var(--facebook);
+    --color-instagram: var(--instagram);
+    --color-twitter: var(--twitter);
+    --color-border-sosmed: rgba(34, 35, 37, 0.35);
+
+    --bg-image-grad-info: linear-gradient(286.17deg, #004CE8 0%, #6F9EFF 100%);
+    --bg-image-grad-success: linear-gradient(286.17deg, #00C247 0%, #73FFA6 100%);
+    --bg-image-grad-warning: linear-gradient(286.17deg, #FFE16A 0%, rgba(255, 229, 128, 0.21) 100%);
+    --bg-image-grad-error: linear-gradient(286.17deg, #FF3333 36.98%, #FF8A9B 100%);
+
+    --font-lato: "Lato", sans-serif;
+    --font-poppins: "Poppins", sans-serif;
+    --font-sans: "DM Sans", sans-serif;
+}
+
+:root {
+    --ivory: #fffdf2;
+
+    --primary-100: #E2FCD9CC;
+    --primary-200: #C0FAB4;
+    --primary-300: #94F08B;
+    --primary-400: #6BE26B;
+    --primary: #3ECF4C;
+
+    --secondary-100: #FFF7D7CC;
+    --secondary-200: #FFECB0;
+    --secondary-300: #FFDF88;
+    --secondary-400: #FFD26B;
+    --secondary: #FFBD3A;
+
+    --tertiary-100: #FEE8D2CC;
+    --tertiary-200: #FECAA5;
+    --tertiary-300: #FCA578;
+    --tertiary-400: #F98256;
+    --tertiary: #F64920;
+
+    --textDark-primary: #222325;
+    --textDark-secondary: #333333AD;
+    --textDark-disabled: #3A354161;
+
+    --textLight-primary: #FFFFFF;
+    --textLight-secondary: #C1C2C4;
+    --textLight-disabled: #9D9EA1;
+
+    --primaryBg: #FFFFFF;
+    --baseBg: #F4F5FA;
+    --secondaryBg: #F9FAFC;
+    --border: #3A35411F;
+
+    --info-pressed: #044AA2;
+    --info-hover: #0663C2;
+    --info-default: #0980E2;
+    --info-bg: #EBF9FE;
+
+    --success-pressed: #1C9675;
+    --success-hover: #28B380;
+    --success-default: #38D189;
+    --success-bg: #E0FDDF;
+
+    --warning-pressed: #B5A40D;
+    --warning-hover: #D8C613;
+    --warning-default: #FCE91B;
+    --warning-bg: #FCF8CA;
+
+    --error-pressed: #B72315;
+    --error-hover: #DB3D1F;
+    --error-default: #FF5C2B;
+    --error-bg: #FCE3D1;
+
+    --greyscale-50: #FAFAFA;
+    --greyscale-100: #F5F5F5;
+    --greyscale-200: #EEEEEE;
+    --greyscale-300: #E0E0E0;
+    --greyscale-400: #BDBDBD;
+    --greyscale-500: #9E9E9E;
+    --greyscale-600: #757575;
+    --greyscale-700: #616161;
+    --greyscale-800: #424242;
+    --greyscale-900: #212121;
+
+    --linkedin: #0077b5;
+    --facebook: #1877f2;
+    --instagram: #E1306C;
+    --twitter: #1da1f2;
+    --border-sosmed: rgba(34, 35, 37, 0.35);
+}

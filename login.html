@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./src/output.css">
+
+    <title>Login</title>
+</head>
+
+<body class="bg-ivory w-full min-h-screen">
+    <header
+        class="navbar sticky bg-primaryBg border-y border-border lg:border-t-0 py-4 px-6 lg:px-20 flex justify-between items-center gap-9">
+
+        <div class="flex items-center lg:justify-between grow gap-6">
+            <a href="index.html" class="w-38 h-10.5 relative lg:w-59.25 lg:h-14">
+                <img src="asset/logo.png" alt="Video Belajar Logo"
+                    class="relative w-[144.77px] h-[22.56px] top-[9.75px] left-[3.25px] object-contain lg:w-48.25 lg:h-7.5 lg:top-3.25 lg:left-5.5">
+            </a>
+        </div>
+    </header>
+
+    <main class="w-full px-5 py-7 lg:py-16">
+
+        <section
+            class="llogin-container mx-auto w-full min-w-0 max-w-147.5 px-5 py-7 lg:px-9 lg:py-9 bg-primaryBg rounded-sm border border-border flex flex-col gap-5 lg:gap-9">
+
+            <header class="flex flex-col gap-2.5">
+                <h1
+                    class="font-poppins font-semibold text-[1.5rem] leading-[110%] tracking-normal text-center text-textDark-primary lg:text-[2rem]">
+                    Masuk ke Akun</h1>
+                <p
+                    class="font-sans font-normal text-[0.875rem] leading-[110%] tracking-normal text-center text-textDark-secondary lg:text-[1rem]">
+                    Yuk, lanjutin belajarmu di videobelajar.</p>
+            </header>
+
+            <div class="flex flex-col gap-5 lg:gap-6">
+
+                <form class="flex flex-col gap-6" action="/login" method="post">
+
+                    <div class="flex flex-col">
+                        <label
+                            class="font-sans font-normal text-[0.875rem] leading-[140%] tracking-[0.2px] text-textDark-secondary lg:text-[1rem]"
+                            for="email">E-Mail
+                            <span
+                                class="font-poppins font-normal text-[1rem] leading-6 tracking-[0.15px] text-error-default"
+                                aria-hidden="true">*</span>
+                        </label>
+
+                        <input
+                            class="border border-border rounded-md py-3 px-2.5 font-sans font-normal text-[0.875rem] leading-[140%] tracking-[0.2px] text-textDark-primary"
+                            type="email" id="email" name="email" placeholder="email123@gmail.com" required>
+
+                        <label
+                            class="font-sans font-normal text-[0.875rem] leading-[140%] tracking-[0.2px] text-textDark-secondary mt-3 lg:text-[1rem]"
+                            for="password">Kata Sandi
+                            <span
+                                class="font-poppins font-normal text-[1rem] leading-6 tracking-[0.15px] text-error-default"
+                                aria-hidden="true">*</span>
+                        </label>
+
+                        <div class="password-wrapper">
+                            <input
+                                class="border border-border rounded-md py-3 px-2.5 font-sans font-normal text-[0.875rem] leading-[140%] tracking-[0.2px] text-textDark-primary placeholder:align-middle"
+                                type="password" id="password" name="password" placeholder="•••••••••••••" required>
+
+                            <button type="button" id="togglePassword" class="btn-toggle-eye"
+                                aria-label="Tampilkan kata sandi">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="currentColor" class="icon-eye" id="eyeIcon">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M3.98 8.223A10.477 10.477 0 0 0 1.934 12C3.226 16.338 7.244 19.5 12 19.5c.993 0 1.953-.138 2.863-.395M6.228 6.228A10.451 10.451 0 0 1 12 4.5c4.756 0 8.773 3.162 10.065 7.498a10.522 10.522 0 0 1-4.293 5.774M6.228 6.228 3 3m3.228 3.228 3.65 3.65m7.894 7.894L21 21m-3.228-3.228-3.65-3.65m0 0a3 3 0 1 0-4.243-4.243m4.242 4.242L9.88 9.88" />
+                                </svg>
+                            </button>
+                        </div>
+                        <a class="font-sans font-medium text-[0.875rem] leading-[140%] tracking-[0.2px] text-textDark-secondary flex justify-end mt-3 lg:text-[1rem] hover:underline" href="/lupa-password">Lupa Password?</a>
+                    </div>
+
+                    <div class="flex flex-col gap-4">
+                        <button type="submit" class="btn btn-primary">Masuk</button>
+                        <a href="./register.html" class="btn btn-primary-shadow">Daftar</a>
+                    </div>
+
+                </form>
+
+                <div class="separator flex justify-center items-center min-h-5 lg:min-h-5.5">
+                    <span class="font-sans font-normal text-[0.875rem] leading-[140%] tracking-[0.2px] text-textDark-secondary px-2 lg:text-[1rem]">atau</span>
+                </div>
+
+                <button class="googleLogin btn btn-google" type="button">
+                    <img src="./asset/icon/google.png" alt="Google">
+                    <span>Masuk dengan Google</span>
+                </button>
+
+            </div>
+
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+
+</html>

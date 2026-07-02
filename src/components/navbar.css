@@ -1,0 +1,21 @@
+@media screen and (width<64rem) {
+
+  a.nav-effect {
+    display: inline-block !important;
+    width: 20%;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    &:hover {
+      transform: scale(1.3);
+      box-shadow: 0 10px 10px -10px var(--color-border) !important;
+    }
+
+    &:active {
+      /* Bayangan khusus di bawah (X-offset, Y-offset, Blur, Spread-negatif, Warna) */
+      box-shadow: 0 20px 20px -5px var(--color-border) !important;
+    }
+  }
+
+
+}
